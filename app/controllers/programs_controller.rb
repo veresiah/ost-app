@@ -35,11 +35,17 @@ class ProgramsController < ApplicationController
     end 
 
     def destroy 
-        @program = Program.find(params[:id]
+        @program = Program.find(params[:id])
         if @program.destroy
             redirect_to programs_path, notice: "Program was successfully deleted."
         else 
             notice: "Program does not exist."
         end 
     end 
+
+    private 
+
+    def program_params
+    end 
+    
 end
