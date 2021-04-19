@@ -30,12 +30,12 @@ a. Your scope method must be chainable, meaning that you must use ActiveRecord Q
 
     [] Error messages describing the validation failures must be present within the view.
 
-[] Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app.
+[x] Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app.
 
-[] Logic present in your controllers should be encapsulated as methods in your models.
+[x] Logic present in your controllers should be encapsulated as methods in your models.
 
 [] Your views should use helper methods and partials when appropriate.
 
-[] Follow patterns in the Rails Style Guide  and the Ruby Style Guide.
+[x] Follow patterns in the Rails Style Guide  and the Ruby Style Guide.
 
 [x] Do not use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding.[]
