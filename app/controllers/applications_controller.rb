@@ -18,11 +18,16 @@ class ApplicationsController < ApplicationController
 
     def show 
         @application = Application.find(params[:id])
+        redirect_to application_path(@application)
     end 
 
     def update
         @application = Application.find(params[:id])
-        @application.update(app_params)
+        if @application.update(app_params)
+            redirect_to application_path(@application)
+        else 
+            render "edit"
+        end 
     end 
 
     def destroy
