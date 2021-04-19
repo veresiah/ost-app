@@ -46,6 +46,13 @@ class ProgramsController < ApplicationController
     private 
 
     def program_params
+        params.require(:program).permit(
+        :name
+        :agency
+        :contact_number
+        :grade_level
+        :address
+        :capacity
+        )
     end 
-    
 end
