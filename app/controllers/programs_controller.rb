@@ -10,21 +10,36 @@ class ProgramsController < ApplicationController
     def create 
         @program = Program.new(program_params)
         if @program.save
-            redirect_to programs_path(@program), notice: "Successfully added a new program"
+            redirect_to programs_path, notice: "Successfully added a new program"
         else 
             render "new"
         end 
     end  
 
     def edit
+        @program = Program.find(params[:id])
     end
 
     def show 
+        @program = Program.find(params[:id])
+        redirect_to program_path(@program)
     end   
 
     def update
+        @program = Program.find(params[:id])
+        if @program.update(program_params)
+            redirect_to program_path(@program), notice: "Successfully updated this program"
+        else 
+            render "edit"
+        end 
     end 
 
     def destroy 
+        @program = Program.find(params[:id]
+        if @program.destroy
+            redirect_to programs_path, notice: "Program was successfully deleted."
+        else 
+            notice: "Program does not exist."
+        end 
     end 
 end
