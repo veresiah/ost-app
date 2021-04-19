@@ -1,24 +1,33 @@
-# README
+# Out of School Time (OST-APP)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+OST-APP is an application that allows users, such as parents to browse or add after school programs from around NYC to their account and fill out an application to their program of choice for their child/children.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1. Fork repository 
 
-* System dependencies
+```bash 
+git clone git@github.com:veresiah/ost-app.git
+```
+2. Install dependencies 
+```ruby 
+bundle install
+```
+## Usage 
 
-* Configuration
+1. Seed database 
+```ruby 
+rails db:seed
+```
+2. Start server and navigate to web address: 
+```bash  
+http://127.0.0.1:3000/
+```
+3. Sign up for an account! 
 
-* Database creation
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://github.com/veresiah/ost-app/blob/master/LICENSE)
