@@ -40,7 +40,7 @@ class ApplicationsController < ApplicationController
         if @application.destroy 
             redirect_to applications_path, notice: "Successfully deleted application"
         else 
-            notice: "Application may have been deleted already."
+            #flash[:error] "Application may have been deleted already."
         end 
     end 
 

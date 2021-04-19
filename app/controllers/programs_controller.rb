@@ -39,7 +39,7 @@ class ProgramsController < ApplicationController
         if @program.destroy
             redirect_to programs_path, notice: "Program was successfully deleted."
         else 
-            notice: "Program does not exist."
+            #notice: "Program does not exist."
         end 
     end 
 
@@ -47,12 +47,12 @@ class ProgramsController < ApplicationController
 
     def program_params
         params.require(:program).permit(
-        :name
-        :agency
-        :contact_number
-        :grade_level
-        :address
-        :capacity
+        :name,
+        :agency,
+        :contact_number,
+        :grade_level,
+        :address,
+        :capacity,
         )
     end 
 end
