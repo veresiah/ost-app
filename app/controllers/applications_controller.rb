@@ -36,6 +36,7 @@ class ApplicationsController < ApplicationController
             redirect_to applications_path, notice: "Successfully deleted application"
         else 
             notice: "Application may have been deleted already."
+        end 
     end 
 
     private 
