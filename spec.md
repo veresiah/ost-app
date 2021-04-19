@@ -3,12 +3,16 @@
 Your models must:
 
 [x] Include at least one has_many, at least one belongs_to, and at least two has_many :through relationships
+- See models [User, Application and Program] for associations requirement fulfillment. 
 
 [x] Include a many-to-many relationship implemented with has_many :through associations. The join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
+- Many-to-many model: Application.
 
-[] Your models must include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
+[x] Your models must include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
+- See models [User, Application and Program] for validations requirement fulfillment. 
 
-[] You must include at least one class level ActiveRecord scope method (Links to an external site.). a. Your scope method must be chainable, meaning that you must use ActiveRecord Query methods (Links to an external site.) within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
+[] You must include at least one class level ActiveRecord scope method. 
+a. Your scope method must be chainable, meaning that you must use ActiveRecord Query methods  within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
 
 [] Your application must provide standard user authentication, including signup, login, logout, and passwords.
 
@@ -32,6 +36,6 @@ Your models must:
 
 [] Your views should use helper methods and partials when appropriate.
 
-[] Follow patterns in the Rails Style Guide (Links to an external site.) and the Ruby Style Guide (Links to an external site.).
+[] Follow patterns in the Rails Style Guide  and the Ruby Style Guide.
 
 [x] Do not use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding.[]
