@@ -16,6 +16,11 @@ class ApplicationsController < ApplicationController
         end 
     end 
 
+    def edit 
+        @application = Application.find(params[:id])
+    end 
+
+
     def show 
         @application = Application.find(params[:id])
         redirect_to application_path(@application)
