@@ -34,4 +34,21 @@ class UsersController < ApplicationController
         @user.destroy 
         redirect_to '/'
     end 
+
+    private 
+    
+    def user_params
+        params.require(:user).permit(
+            :first_name,
+            :last_name,
+            :username,
+            :password_digest,
+            :street_address,
+            :city,
+            :state,
+            :zip_code,
+            :"phone_number,
+            :"email_address
+        )
+    end
 end
