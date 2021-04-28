@@ -1,4 +1,4 @@
-<h1>Create New User Profile</h1>
+<h1>Create New Parent Profile</h1>
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -24,7 +24,7 @@
     <%= f.text_field :username %><br>
 
     <label>Password:</label><br>
-    <%= f.text_field :password_digest %><br>
+    <%= f.password_field :password_digest %><br>
 
     <label>Street Address:</label><br>
     <%= f.text_field :street_address %><br>
