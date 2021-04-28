@@ -23,7 +23,14 @@ rails db:seed
 ```bash  
 http://127.0.0.1:3000/
 ```
-3. Sign up for an account! 
+3. Use demo account:
+```bash  
+username: guest
+password: guest
+``` 
+OR 
+
+Sign up for an account! 
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
