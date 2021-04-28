@@ -1,18 +1,4 @@
 <h1>Edit Application</h1>
-<% if @application.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@application.errors.count, "error") %>
-      prohibited this post from being saved:
-    </h2>
-
-    <ul>
-    <% @application.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %> 
   <%= form_for(@application) do |f| %>
     <label>Student First Name:</label><br>
     <%= f.text_field :first_name %><br>
