@@ -1,2 +1,6 @@
-<h1>All Apllications</h1>
-<h2><strong>@application.program_name | @application.first_name</strong></h2>
+<h1>All Applications</h1>
+<ul>
+    <% @applications.each do |application| %>
+        <li> link_to application_path(application) <strong> application.program_name | application.first_name </strong></h2><br>
+    %end%>
+<ul>
