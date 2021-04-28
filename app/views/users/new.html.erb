@@ -1,18 +1,4 @@
-<h1>Create New Parent Profile</h1>
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@user.errors.count, "error") %>
-      prohibited this user profile from being saved:
-    </h2>
-
-    <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %> 
+<h1>Create New Parent Profile</h1> 
   <%= form_for(@user) do |f| %>
     <label>First Name:</label><br>
     <%= f.text_field :first_name %><br>
