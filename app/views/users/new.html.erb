@@ -1,1 +1,48 @@
 <h1>Create New User Profile</h1>
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@user.errors.count, "error") %>
+      prohibited this user profile from being saved:
+    </h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %> 
+  <%= form_for(@user) do |f| %>
+    <label>First Name:</label><br>
+    <%= f.text_field :first_name %><br>
+  
+    <label>Last Name:</label><br>
+    <%= f.text_field :last_name %><br>
+
+    <label>Username:</label><br>
+    <%= f.text_field :username %><br>
+
+    <label>Password:</label><br>
+    <%= f.text_field :password_digest %><br>
+
+    <label>Street Address:</label><br>
+    <%= f.text_field :street_address %><br>
+
+    <label>City:</label><br>
+    <%= f.text_field :city %><br>
+
+    <label>State:</label><br>
+    <%= f.text_field :state %><br>
+
+    <label>Zip Code:</label><br>
+    <%= f.text_field :zip_code %><br>
+
+    <label>Phone Number:</label><br>
+    <%= f.text_field :phone_number %><br>
+
+    <label:</label>Email:</label><br>
+    <%= f.text_field :email_address %><br>
+
+    <br><%= f.submit %>
+  <% end %> 
