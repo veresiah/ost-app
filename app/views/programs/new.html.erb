@@ -1,1 +1,23 @@
-<h1>Create Program</h1>
+<h1>Add a new OST Program</h1>
+<%= form_for(@program) do |f| %>
+    <label>Name:</label><br>
+    <%= f.text_field :name %><br>
+  
+    <label>Agency:</label><br>
+    <%= f.text_field :agency %><br>
+
+    <label>Contact Number:</label><br>
+    <%= f.text_field :contact_number %><br>
+
+    <label>Grade Level:</label><br>
+    <%= f.text_field :grade_level %><br>
+
+    <label>Address:</label><br>
+    <%= f.text_area :address %><br>
+
+    <label>Capacity:</label><br>
+    <%= f.text_field :capacity %><br>
+
+    <br><%= f.submit %>
+  <% end %>
+    
