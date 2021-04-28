@@ -47,8 +47,8 @@ class UsersController < ApplicationController
             :city,
             :state,
             :zip_code,
-            :"phone_number,
-            :"email_address
+            :phone_number,
+            :email_address
         )
     end
 end
