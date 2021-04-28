@@ -40,27 +40,27 @@ class ApplicationsController < ApplicationController
         if @application.destroy 
             redirect_to applications_path, notice: "Successfully deleted application"
         else 
-            #flash[:error] "Application may have been deleted already."
+            flash[:error] "Application may have been deleted already."
         end 
     end 
 
     private 
     
-        def app_params
-            params.require(:application).permit(
-            :first_name,
-            :last_name,
-            :DOB,
-            :grade,
-            :gender,
-            :school,
-            :primary_doctor,
-            :allergies,
-            :medical_conditions,
-            :medications,
-            :emergency_contact_name,
-            :emergency_contact_relationship,
-            :emergency_contact_number,
-            )
-        end 
+    def app_params
+        params.require(:application).permit(
+        :first_name,
+        :last_name,
+        :DOB,
+        :grade,
+        :gender,
+        :school,
+        :primary_doctor,
+        :allergies,
+        :medical_conditions,
+        :medications,
+        :emergency_contact_name,
+        :emergency_contact_relationship,
+        :emergency_contact_number,
+        )
+    end 
 end

@@ -39,7 +39,7 @@ class ProgramsController < ApplicationController
         if @program.destroy
             redirect_to programs_path, notice: "Program was successfully deleted."
         else 
-            #notice: "Program does not exist."
+            flash[:error] "Program does not exist."
         end 
     end 
 
