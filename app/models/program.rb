@@ -8,4 +8,8 @@ class Program < ApplicationRecord
     validates :grade_level, presence: true 
     validates :address, presence: true 
     validates :capacity, presence: true
+
+    scope :filter_by_agency -> {where("agency = ?", params[:agency])}
+    scope :filter_by_name -> {where("name = ?", params[:name])}
+    scope :filter_by_grade_level -> {where("grade_level = ?", params[:grade_level])}
 end
