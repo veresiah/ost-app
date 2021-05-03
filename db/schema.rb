@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_28_145704) do
+ActiveRecord::Schema.define(version: 2021_05_03_231930) do
 
   create_table "applications", force: :cascade do |t|
     t.integer "user_id"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2021_04_28_145704) do
     t.string "emergency_contact_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "program_name"
   end
 
   create_table "programs", force: :cascade do |t|
