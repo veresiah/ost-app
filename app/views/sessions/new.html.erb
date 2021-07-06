@@ -1,10 +1,10 @@
 <h1>Log In</h1>
-<%= form_for(:session, url: login_path) do |f| %>
-    <label>Username:</label><br>
+<%= form_for @user url: login_path, method: :post do |f| %>
+    <%= f.label :username %><br>
     <%= f.text_field :username %><br>
-    <label>Password:</label><br>
+    <%= f.label :password %><br>
     <%= f.password_field :password %><br>
     <br><%= f.submit 'Login' %>
 <% end %>
 <br>
-<%= button_to "Log in with Facebook", '#add 3rd party route'
+<%= link_to('Log in with Facebook!', '/auth/facebook', method: :post) %>
