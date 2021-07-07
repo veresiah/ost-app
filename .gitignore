@@ -10,6 +10,14 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-*
+/db/*development.sqlite3-*
+/db/*development.sqlite3
+/db/*test.sqlite3-*
+/db/*test.sqlite3
+/db/*test.sqlite3-0*
+/db/*test.sqlite3-0
+/db/*test.sqlite3-1*
+/db/*test.sqlite3-1
 
 # Ignore all logfiles and tempfiles.
 /log/*

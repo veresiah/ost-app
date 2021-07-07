@@ -1,34 +1,34 @@
 <h1>@user.first_name Profile</h1>
-  <%= form_for(@user) do |f| %>
-    <label>First Name:</label><br>
-    <%= f.text_field :first_name %><br>
-  
-    <label>Last Name:</label><br>
-    <%= f.text_field :last_name %><br>
+<%= form_for(@user) do |f| %>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %><br>
 
-    <label>Username:</label><br>
-    <%= f.text_field :username %><br>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %><br>
 
-    <label>Password:</label><br>
-    <%= f.password_field :password_digest %><br>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br>
 
-    <label>Street Address:</label><br>
-    <%= f.text_field :street_address %><br>
+  <%= f.label :email %><br>
+  <%= f.text_field :email %><br>
 
-    <label>City:</label><br>
-    <%= f.text_field :city %><br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
 
-    <label>State:</label><br>
-    <%= f.text_field :state %><br>
+  <%= f.label :street_address %><br>
+  <%= f.text_field :street_address %><br>
 
-    <label>Zip Code:</label><br>
-    <%= f.text_field :zip_code %><br>
+  <%= f.label :city %><br>
+  <%= f.text_field :city %><br>
 
-    <label>Phone Number:</label><br>
-    <%= f.text_field :phone_number %><br>
+  <%= f.label :state %><br>
+  <%= f.text_field :state %><br>
 
-    <label:</label>Email:</label><br>
-    <%= f.text_field :email_address %><br>
+  <%= f.label :zip_code %><br>
+  <%= f.text_field :zip_code %><br>
 
-    <br><%= f.submit %>
-  <% end %> 
+  <%= f.label :phone_number %><br>
+  <%= f.text_field :phone_number %><br>
+
+  <br><%= f.submit %>
+<% end %> 

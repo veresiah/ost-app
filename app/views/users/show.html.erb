@@ -1,4 +1,4 @@
-<h1>@user.first_name Profile</h1>
+<h1><%= @user.first_name %>'s Profile</h1>
 <br>
   <ul>
     <li>First Name: <%= @user.first_name %></li><br>
@@ -10,4 +10,8 @@
     <li>Phone Number: <%= @user.phone_number %></li><br>
     <li>Email: <%= @user.email %></li><br>
   </ul>
-</br>
+  Profile created: <%= @user.created_at.strftime('%B %d, %Y, %T') %><br> 
+  Profile updated: <%= @user.updated_at.strftime('%B %d, %Y, %T') %>
+<br>
+<%= link_to 'Edit Profile', edit_user_path(@user) %><br>
+<%= link_to 'Log Out', logout_path %>

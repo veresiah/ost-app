@@ -1,10 +1,10 @@
 <h1>Log In</h1>
-<%= form_for @user url: login_path, method: :post do |f| %>
-    <%= f.label :email_address %><br>
-    <%= f.text_field :email_address %><br>
-    <%= f.label :password %><br>
-    <%= f.password_field :password %><br>
-    <br><%= f.submit 'Login' %>
+<%= form_tag url: login_path, method: :post do %>
+    Email: <%= text_field_tag :email %><br>
+    <br>
+    Password: <%= password_field_tag :password %><br>
+    <br><%= submit_tag 'Log In' %>
 <% end %>
 <br>
+
 <%= link_to('Log in with Facebook!', '/auth/facebook', method: :post) %>
