@@ -42,13 +42,13 @@ class UsersController < ApplicationController
             :first_name,
             :last_name,
             :username,
-            :password_digest,
+            :password,
             :street_address,
             :city,
             :state,
             :zip_code,
             :phone_number,
-            :email_address
+            :email
         )
     end
 end
