@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     end 
 
     def create_using_facebook
-        user = User.find_or_create_by(email_address: auth['email']) do |u|
+        user = User.find_or_create_by(email: auth['email']) do |u|
             u.email = auth['info']['email']
             u.password = auth['info']['password']
         end 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_03_231930) do
+ActiveRecord::Schema.define(version: 2021_07_06_032221) do
 
   create_table "applications", force: :cascade do |t|
     t.integer "user_id"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2021_05_03_231930) do
     t.string "state"
     t.integer "zip_code"
     t.integer "phone_number"
-    t.string "email_address"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
