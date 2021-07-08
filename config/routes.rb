@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   #auth
   get '/auth/facebook/callback' => 'sessions#create_using_facebook'
+  get '/auth/google_oauth2/callback' => 'sessions#omniauth'
   
   root 'welcome#welcome'
   
