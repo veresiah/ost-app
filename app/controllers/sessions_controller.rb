@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     end  
 
     def create
-        @user = User.find_by(email: params[:email])
+        @user = User.find_by(id: params[:id])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             redirect_to user_path(@user)
@@ -14,18 +14,13 @@ class SessionsController < ApplicationController
         end 
     end 
 
-    def create_using_facebook
-        @user = User.find_or_create_by(uid: auth['uid']) do |u|
-            u.email = auth['info']['email']
-            u.password = auth['info']['password']
-            u.first_name = auth['info']['first_name']
-            u.last_name = auth['info']['last_name']
-        end 
-        #binding.pry
-        @user.save
-        session[:user_id] = @user.id
-        redirect_to user_path(@user)
-        flash[:success] = "Login with Facebook was successful"
+    def omniauth
+        user = User.from_omniauth(auth)
+        binding.pry
+        user.valid? 
+        session[:user_id] = user.id
+        redirect_to edit_user_path(user)
+        flash[:success] = "Login was successful" 
     end 
         
     def destroy 
