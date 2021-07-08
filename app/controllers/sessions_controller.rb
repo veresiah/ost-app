@@ -15,11 +15,10 @@ class SessionsController < ApplicationController
     end 
 
     def omniauth
-        user = User.from_omniauth(auth)
-        binding.pry
+        user = User.from_omniauth(request.env['omniauth.auth'])
         user.valid? 
         session[:user_id] = user.id
-        redirect_to edit_user_path(user)
+        redirect_to user_path(user)
         flash[:success] = "Login was successful" 
     end 
         
@@ -27,11 +26,5 @@ class SessionsController < ApplicationController
         session.delete :user_id
         redirect_to login_path
         flash[:notice] = "Logged out successfully"
-    end 
-
-    private
-
-    def auth
-        request.env['omniauth.auth']
-    end 
+    end
 end 
