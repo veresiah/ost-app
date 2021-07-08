@@ -15,10 +15,14 @@ class SessionsController < ApplicationController
     end 
 
     def create_using_facebook
-        @user = User.find_or_create_by(email: auth['email']) do |u|
+        @user = User.find_or_create_by(uid: auth['uid']) do |u|
             u.email = auth['info']['email']
             u.password = auth['info']['password']
+            u.first_name = auth['info']['first_name']
+            u.last_name = auth['info']['last_name']
         end 
+        #binding.pry
+        @user.save
         session[:user_id] = @user.id
         redirect_to user_path(@user)
         flash[:success] = "Login with Facebook was successful"

@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
  gem 'omniauth-rails_csrf_protection'
  gem 'dotenv-rails'
  gem 'rack-flash3'
+ gem 'pry'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
