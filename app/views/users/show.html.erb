@@ -5,7 +5,7 @@
     <li>Email: <%= @user.email %></li><br>
   </ul>
   Profile Created: <%= @user.created_at.strftime('%B %d, %Y, %T') %><br> 
-  Profile Updated: <%= @user.updated_at.strftime('%B %d, %Y, %T') %>
+  Profile Updated: <%= @user.updated_at.strftime('%B %d, %Y, %T') %><br>
 <br>
-<%= button_to 'Edit Profile', edit_user_path(@user) %><br>
-<%= button_to 'Log Out', logout_path %>
+<%= button_to( 'Edit Profile', edit_user_path(@user), method: :get) %><br>
+<%= button_to( 'Log Out', logout_path, method: :get) %>
