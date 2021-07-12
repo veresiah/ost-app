@@ -10,9 +10,8 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback' => 'sessions#omniauth'
   
   root 'welcome#welcome'
-  
-  resources :users, except: [:index]
-  resources :users do 
+
+  resources :users, except: [:index] do 
     resources :programs, shallow: true
   end 
 
