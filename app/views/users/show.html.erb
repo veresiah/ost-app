@@ -4,8 +4,8 @@
     <li>Full Name: <%= @user.name %></li><br>
     <li>Email: <%= @user.email %></li><br>
   </ul>
-  Profile created: <%= @user.created_at.strftime('%B %d, %Y, %T') %><br> 
-  Profile updated: <%= @user.updated_at.strftime('%B %d, %Y, %T') %>
+  Profile Created: <%= @user.created_at.strftime('%B %d, %Y, %T') %><br> 
+  Profile Updated: <%= @user.updated_at.strftime('%B %d, %Y, %T') %>
 <br>
-<%= link_to 'Edit Profile', edit_user_path(@user) %><br>
-<%= link_to 'Log Out', logout_path %>
+<%= button_to 'Edit Profile', edit_user_path(@user) %><br>
+<%= button_to 'Log Out', logout_path %>
