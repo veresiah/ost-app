@@ -50,7 +50,7 @@ class ProgramsController < ApplicationController
         :contact_number,
         :grade_level,
         :address,
-        :capacity,
+        :borough,
         )
     end 
 end

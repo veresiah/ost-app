@@ -11,13 +11,12 @@ Rails.application.routes.draw do
   
   root 'welcome#welcome'
   
-  resources :users
-  resources :programs
-  resources :applications
-
+  resources :users, except: [:index]
   resources :users do 
-    resources :programs, only: [:index, :new, :create]
+    resources :programs, shallow: true
   end 
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
+  resources :programs do 
+    resources :applications, shallow: true
+  end 
+end 
