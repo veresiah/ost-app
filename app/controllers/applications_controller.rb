@@ -1,4 +1,5 @@
 class ApplicationsController < ApplicationController
+    before_action :require_login
     def index 
         @applications = Application.all 
     end 
