@@ -19,11 +19,13 @@ a. Your scope method must be chainable, meaning that you must use ActiveRecord Q
 [x] Your authentication system must also allow login from some other service. Facebook, Twitter, Foursquare, Github, etc... 
 Yes, users can log in from Facebook and Google.
 
-[] You must include and make use of a nested resource with the appropriate RESTful URLs.
+[x] You must include and make use of a nested resource with the appropriate RESTful URLs.
 
-    [] You must include a nested new route with form that relates to the parent resource
+    [x] You must include a nested new route with form that relates to the parent resource
+    nested new routes for users (parent) and programs and programs(parent) and applications 
 
-    [] You must include a nested index or show route
+    [x] You must include a nested index or show route
+    nested index routes for users (parent) and programs and programs(parent) and applications
 
 [] Your forms should correctly display validation errors.
 
