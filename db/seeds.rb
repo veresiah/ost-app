@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#User.create!(id: 5, name:"Guest", password: "guest", email: "guest1@mail.com")
+Program.create!(user_id: 1, name: "IS 347", agency: "YMCA/Eastern District", address: "25 Starr Street 11221", borough: "Brooklyn", contact_number: "7189470604", grade_level: "Elementary")
+Program.create!(user_id: 1, name: "JHS 226", agency: "Child Center of New York", address: "121 10 Rockaway Blvd 11420", borough: "Queens", contact_number: "7183220011", grade_level: "Elementary")
+Program.create!(user_id: 1, name: "PS 86", agency: "Mosholu Montefiore Community Center", address: "2756 Reservoir Avenue 14068", borough: "Bronx", contact_number: "7185637410", grade_level: "Elementary")
+Program.create!(user_id: 1, name: "IS 2", agency: "United Activities Unlimited", address: "333 Midland Avenue 10306", borough: "Staten Island", contact_number: "7189870351", grade_level: "Elementary")
+Program.create!(user_id: 1, name: "IS 164", agency: "Community Association Progressive Dominicans", address: "401 164th Street 10032", borough: "Manhattan", contact_number: "2127959511", grade_level: "Elementary")
+Program.create!(user_id: 1, name: "I.S. 27 ANNING S. PRALL SCHOOL", agency: "Sports and Arts In Schools Foundation, Inc.", address: "11 Clove Lake Place 10310", borough: "Staten Island", contact_number: "7185564782", grade_level: "Middle School")
+Program.create!(user_id: 1, name: "I.S. 285 MEYER LEVIN SCHOOL", agency: "Sports and Arts In Schools Foundation, Inc.", address: "5909 Beverley Road 11203", borough: "Brooklyn", contact_number: "7184512200", grade_level: "Middle School")
+Program.create!(user_id: 1, name: "P.S./I.S. 124 OSMOND A. CHURCH", agency: "Mercy First", address: "129 15 150th Avenue 11420", borough: "Queens", contact_number: "7188481532", grade_level: "Middle School")
+Program.create!(user_id: 1, name: "Edgies", agency: "Educational Alliance, Inc.", address: "197 Broadway 10002", borough: "Manhattan", contact_number: "2127802300", grade_level: "Middle School")
+Program.create!(user_id: 1, name: "C.E.S. 42 CLAREMONT SCHOOL", agency: "Supportive Childrens Advocacy Network (SCAN)", address: "1537 Washington Avenue 10457", borough: "Bronx", contact_number: "7185837366", grade_level: "Middle School")
+Program.create!(user_id: 1, name: "CONCORD HIGH SCHOOL", agency: "New York Center for Interpersonal Development", address: "109 Rhine Ave 10304", borough: "Staten Island", contact_number: "7189474136", grade_level: "High School")
+Program.create!(user_id: 1, name: "Baychester Center-HS", agency: "Baychester Youth Council", address: "1220 229th Street 10466", borough: "Bronx", contact_number: "7183259484", grade_level: "High School")
+Program.create!(user_id: 1, name: "LaGuardia Memorial House", agency: "Supportive Childrens Advocacy Network (SCAN)", address: "307 116th Street 10029", borough: "Manhattan", contact_number: "2125347800", grade_level: "High School")
+Program.create!(user_id: 1, name: "Brooklyn Collegiate", agency: "Sports and Arts In Schools Foundation, Inc.", address: "2240 Dean Street 11233 ", borough: "Brooklyn", contact_number: "7189221145", grade_level: "High School")
+Program.create!(user_id: 1, name: "National for Negro Women", agency: "National Council for Negro Women of Greater New York", address: "114 02 Guy R Brewer Boulevard 11434", borough: "Queens", contact_number: "7186578585", grade_level: "High School")
+#Application.create!()
