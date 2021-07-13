@@ -1,4 +1,3 @@
-#User.create!(id: 5, name:"Guest", password: "guest", email: "guest1@mail.com")
 Program.create!(user_id: 1, name: "IS 347", agency: "YMCA/Eastern District", address: "25 Starr Street 11221", borough: "Brooklyn", contact_number: "7189470604", grade_level: "Elementary")
 Program.create!(user_id: 1, name: "JHS 226", agency: "Child Center of New York", address: "121 10 Rockaway Blvd 11420", borough: "Queens", contact_number: "7183220011", grade_level: "Elementary")
 Program.create!(user_id: 1, name: "PS 86", agency: "Mosholu Montefiore Community Center", address: "2756 Reservoir Avenue 14068", borough: "Bronx", contact_number: "7185637410", grade_level: "Elementary")
@@ -14,4 +13,3 @@ Program.create!(user_id: 1, name: "Baychester Center-HS", agency: "Baychester Yo
 Program.create!(user_id: 1, name: "LaGuardia Memorial House", agency: "Supportive Childrens Advocacy Network (SCAN)", address: "307 116th Street 10029", borough: "Manhattan", contact_number: "2125347800", grade_level: "High School")
 Program.create!(user_id: 1, name: "Brooklyn Collegiate", agency: "Sports and Arts In Schools Foundation, Inc.", address: "2240 Dean Street 11233 ", borough: "Brooklyn", contact_number: "7189221145", grade_level: "High School")
 Program.create!(user_id: 1, name: "National for Negro Women", agency: "National Council for Negro Women of Greater New York", address: "114 02 Guy R Brewer Boulevard 11434", borough: "Queens", contact_number: "7186578585", grade_level: "High School")
-#Application.create!()

@@ -1,8 +1,8 @@
 class User < ApplicationRecord
     has_secure_password
 
-    has_many :applications
-    has_many :programs, through: :applications 
+    #has_many :applications
+    has_many :programs
 
     validates :name, :password, presence: true
     validates :email, presence: true, uniqueness: true

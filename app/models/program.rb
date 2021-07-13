@@ -1,6 +1,7 @@
-class Program < ApplicationRecord
-    has_many :applications 
-    has_many :users, through: :applications 
+class Program < ApplicationRecord 
+    belongs_to :user
+    #has_many :applications
+    #has_many :users, through: :applications 
 
     validates :name, :agency, :grade_level, :borough, :address, presence: true
     validates :contact_number, length: { is: 10 }

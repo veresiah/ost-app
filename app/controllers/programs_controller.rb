@@ -1,7 +1,11 @@
 class ProgramsController < ApplicationController
     before_action :require_login
     def index 
-        @programs = Program.all
+        if params[:user_id]
+            @programs = User.find(params[:user_id]).programs
+        else 
+            @programs = Program.all
+        end 
     end 
 
     def new

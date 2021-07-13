@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_12_182550) do
+ActiveRecord::Schema.define(version: 2021_07_13_221636) do
 
   create_table "applications", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "program_id"
-    t.string "first_name"
-    t.string "last_name"
-    t.date "DOB"
-    t.string "grade"
-    t.string "gender"
-    t.string "school"
     t.string "primary_doctor"
     t.string "allergies"
     t.string "medical_conditions"
@@ -30,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_07_12_182550) do
     t.string "emergency_contact_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "program_name"
+    t.integer "participant_id"
   end
 
   create_table "programs", force: :cascade do |t|
@@ -41,7 +36,6 @@ ActiveRecord::Schema.define(version: 2021_07_12_182550) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "borough"
-    t.string "user_id"
   end
 
   create_table "users", force: :cascade do |t|

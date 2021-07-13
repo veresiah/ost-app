@@ -1,1 +1,6 @@
-<h1>All Programs</h1>
+<h1>All Out of School Programs</h1>
+<ul> 
+<% @programs.each do |program| %>
+    <li> <%= link_to program.name, program_path(program) %></li>
+    <% end %>
+</ul>
