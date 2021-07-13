@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'participant/new'
+  get 'participant/edit'
+  get 'participant/show'
   root 'welcome#welcome'
   
   #sessions 
@@ -13,4 +16,6 @@ Rails.application.routes.draw do
   resources :users, except: [:index] do 
     resources :programs, shallow: true 
   end
+
+  resources :applications, :particpants
 end 
