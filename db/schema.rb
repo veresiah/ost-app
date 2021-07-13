@@ -10,21 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_13_221636) do
+ActiveRecord::Schema.define(version: 2021_07_13_230326) do
 
   create_table "applications", force: :cascade do |t|
+    t.integer "participant_id"
     t.integer "user_id"
+    t.string "program_name"
     t.string "primary_doctor"
     t.string "allergies"
     t.string "medical_conditions"
     t.string "medications"
-    t.string "emergency_contact_name"
+    t.string "emergency_contact"
+    t.integer "emergency_contact_number"
     t.string "emergency_contact_relationship"
-    t.string "emergency_contact_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "program_name"
-    t.integer "participant_id"
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.date "DOB"
+    t.string "grade"
+    t.string "gender"
+    t.string "school"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "programs", force: :cascade do |t|
@@ -33,19 +44,20 @@ ActiveRecord::Schema.define(version: 2021_07_13_221636) do
     t.integer "contact_number"
     t.string "grade_level"
     t.text "address"
+    t.string "borough"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "borough"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "password_digest"
+    t.string "uid"
+    t.string "name"
     t.string "email"
+    t.string "password_digest"
+    t.string "provider"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "uid"
-    t.string "provider"
-    t.string "name"
   end
 
 end
