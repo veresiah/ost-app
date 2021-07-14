@@ -1,7 +1,6 @@
-<h1>OST Program: <em>@program.name</em></h1>
+<h1>OST Program: <em><%= @program.name %></em></h1>
 <br>
   <ul>
-    <li>Name: <%= @program.name %></li><br>
     <li>Agency: <%= @program.agency %></li><br>
     <li>Address: <%= @program.address %></li><br>
     <li>Grade Level: <%= @program.grade_level %></li><br>
@@ -9,3 +8,6 @@
     <li>Contact Number: <%= @program.contact_number %></li><br>
   </ul>
 </br>
+
+<%= button_to('Start Application', new_application_path, method: :get) %>
+<%= button_to('Log Out', logout_path, method: :get) %>

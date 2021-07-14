@@ -27,7 +27,6 @@ class ProgramsController < ApplicationController
 
     def show 
         @program = Program.find(params[:id])
-        redirect_to program_path(@program)
     end   
 
     def update

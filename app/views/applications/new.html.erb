@@ -1,22 +1,7 @@
 <h1>Create Application</h1>
   <%= form_for(@application) do |f| %>
-    <label>Student First Name:</label><br>
-    <%= f.text_field :first_name %><br>
-  
-    <label>Student Last Name:</label><br>
-    <%= f.text_field :last_name %><br>
-
-    <label>Student Date of Birth:</label><br>
-    <%= f.date_field :DOB %><br>
-
-    <label>Grade:</label><br>
-    <%= f.text_field :grade %><br>
-
-    <label>Gender:</label><br>
-    <%= f.text_field :gender %><br>
-
-    <label>School:</label><br>
-    <%= f.text_field :school %><br>
+    <label>Program Name:</label><br>
+    <%= f.text_field :program_name %><br>
 
     <label>Primary Doctor:</label><br>
     <%= f.text_field :primary_doctor %><br>
@@ -30,8 +15,8 @@
     <label>Medications:</label><br>
     <%= f.text_area :medications %><br>
 
-    <label>Emergency Contact Name:</label><br>
-    <%= f.text_field :emergency_contact_name %><br>
+    <label>Emergency Contact:</label><br>
+    <%= f.text_field :emergency_contact %><br>
 
     <label>Contact Relationship:</label><br>
     <%= f.text_field :emergency_contact_relationship %><br>
