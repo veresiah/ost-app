@@ -24,7 +24,6 @@ class ApplicationsController < ApplicationController
 
     def show 
         @application = Application.find(params[:id])
-        redirect_to application_path(@application)
     end 
 
     def update
